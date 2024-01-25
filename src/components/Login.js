@@ -1,24 +1,77 @@
 import React, { useState , useRef } from 'react'
-import Header from './Header'
+import {useDispatch} from 'react-redux'
 import baclground from '../assets/background-flix.jpeg'
 import { validateFrom } from '../utils/validation'
+import {  createUserWithEmailAndPassword  , signInWithEmailAndPassword , updateProfile } from "firebase/auth";
+import {auth} from '../utils/firebase'
+import { useNavigate } from 'react-router-dom';
+import { adduser } from '../utils/userSlice';
+
 const Login = () => {
   const [FormStatus , setFormStatus] = useState(false)
   const [message , setMessage] = useState(null)
+  const dispatch = useDispatch()
   const toggleStatus = () =>{
     setFormStatus(!FormStatus)
   }
-  
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
-  const name = useRef(null);
+  const navigate = useNavigate() ; 
   const Hendelsigninbutton = ()=>{
     // console.log(password);
-    setMessage(validateFrom(password.current.value , email.current.value , name.current.value));
+    const message = validateFrom(password.current.value , email.current.value )
+    setMessage(message);
+
+    if(message) return;
+    
+    if(FormStatus)
+    {
+      
+      // sign up 
+      createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+      .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        // updating the name 
+        updateProfile(user, {
+          displayName: name.current.value
+        }).then(() => {
+          // Profile updated! 
+          const {uid , email , displayName} = auth.currentUser;
+          //auth.currentUser will get the updated user data 
+          dispatch(adduser({uid : uid , email : email , displayName : displayName}))
+        }).catch((error) => {
+        });
+        navigate('/browse')
+        console.log(user);
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        const errorMessage = error.message;
+        setMessage(errorMessage)
+      });
+    }
+    else
+    {
+      //sign in 
+      signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        navigate('/browse')
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setMessage(errorMessage + " "+ errorCode);
+      });
+    }
+    
+    
   }
   return (
     <div className=''>
-        <Header/>
+        {/* <Header/> */}
         {/* form validation  */}
         <img className='hidden md:block select-none  absolute -z-10 h-svh w-svw object-coverx' src={baclground} alt="" />
         <div className=' absolute mt-[50vh] translate-y-[-50%] ml-[50%] translate-x-[-50%]'>
