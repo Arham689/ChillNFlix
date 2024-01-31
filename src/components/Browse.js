@@ -6,6 +6,7 @@ import useGetPopularMovies from '../Hooks/useGetPopularMovies'
 import useGetUpComingMovies from '../Hooks/useGetUpComingMovies'
 import MainVideoBackground from './MainVideoBackground'
 import SecondaryVideoList from './SecondaryVideoList'
+import Footer from './Footer'
 
 const Browse = () => {
   
@@ -18,6 +19,7 @@ const Browse = () => {
       <Header/>
       <MainVideoBackground/>
       <SecondaryVideoList/>
+      <Footer/>
     </div>
   )
 }
