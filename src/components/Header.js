@@ -54,8 +54,8 @@ const Header = () => {
   }
   return (
     <>
-      <div className="flex w-screen justify-between absolute bg-gradient-to-b from-black via-[black] ">
-        <img width={200} src={logo} alt="logo" />
+      <div className="flex w-screen justify-between fixed bg-gradient-to-b from-black via-[black] ">
+        <img className='w-24  md:w-56' src={logo} alt="logo" />
         {user && <div className="flex items-center">
 
           {isGptVisible ? <select onChange = {handellang} className=" text-white mr-4 border  rounded-md bg-black ">
