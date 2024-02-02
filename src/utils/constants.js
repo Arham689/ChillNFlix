@@ -9,4 +9,12 @@ export const options = {
     }
   };
 
+export const avalibleLang = [
+  {id : 'en' , name : "en"},
+  {id : 'hindi' , name : "hindi"},
+  {id : 'french' , name : "french"},
+  {id : 'spanish' , name : "spanish"}
+
+]
+
   export const TMDB_IMG_URL = "https://image.tmdb.org/t/p/w500"

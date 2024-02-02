@@ -8,8 +8,12 @@ import MainVideoBackground from './MainVideoBackground'
 import SecondaryVideoList from './SecondaryVideoList'
 import Footer from './Footer'
 
+import { useSelector } from 'react-redux'
+import GptSearch from './GptSearch'
+
 const Browse = () => {
-  
+  const isGptvisible = useSelector(store => store.gpt.isGptOpened)
+  // console.log(isGptvisible);
    useGetNowPlayingMovies()
    useGetTopRatedMovies()
    useGetPopularMovies()
@@ -17,8 +21,10 @@ const Browse = () => {
   return (
     <div>
       <Header/>
-      <MainVideoBackground/>
-      <SecondaryVideoList/>
+      {
+        isGptvisible ?<GptSearch/>:<div><MainVideoBackground/>
+        <SecondaryVideoList/></div>
+      }
       <Footer/>
     </div>
   )
