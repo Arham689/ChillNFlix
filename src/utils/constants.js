@@ -19,4 +19,4 @@ export const avalibleLang = [
 
   export const TMDB_IMG_URL = "https://image.tmdb.org/t/p/w500"
 
-  export const OPENAI_KEY = "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"
+  export const OPENAI_KEY = process.env.REACT_APP_OPENAPI_KEY
