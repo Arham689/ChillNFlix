@@ -4,8 +4,6 @@ import VideoBackground from './VideoBackground'
 import VideoTitle from './VideoTitle'
 const MainVideoBackground = () => {
     const moviesData = useSelector(store => store.movies?.NowPlayingMovies)
-
-    
     const index = Math.floor((Math.random()*20) )
     //on the very first render the value in the stor is null 
     if(!moviesData) return

@@ -1,8 +1,9 @@
 import React from 'react'
 import Browse from './Browse'
 import Login from './Login'
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter  , BrowserRouter} from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
+import SingleMovie from './SingleMovie'
 
 const Body = ()=>{
     const myrouter = createBrowserRouter([
@@ -13,6 +14,10 @@ const Body = ()=>{
         {
           path : '/browse',
           element : <Browse/> 
+        },
+        {
+          path : '/info/:id',
+          element : <SingleMovie/>
         }
       ])
 

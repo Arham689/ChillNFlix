@@ -9,7 +9,7 @@ const GptmovieList = () => {
   return <div className='z-40x bg-black md:bg-[#00000097]'>
         {
             searchedTitles.map((title , index )=>{
-                return <MovieList title={title} movies={searchedMivesList[index]}/>
+                return <MovieList key={index} title={title} movies={searchedMivesList[index]}/>
             })
         }
   </div>

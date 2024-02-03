@@ -17,7 +17,7 @@ const VideoBackground = ({id}) => {
         // const YT_key = trailerData?.key
 
     }
-
+    
     useEffect(()=>{
         getVideosOfMainMovie()
     },[])

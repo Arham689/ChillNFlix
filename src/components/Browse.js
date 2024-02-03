@@ -22,9 +22,10 @@ const Browse = () => {
     <div>
       <Header/>
       {
-        isGptvisible ?<GptSearch/>:<div><MainVideoBackground/>
-        <SecondaryVideoList/>
-        <Footer/>
+        isGptvisible ?<GptSearch/>:<div>
+          <MainVideoBackground/>
+          <SecondaryVideoList/>
+          <Footer/>
         </div>
       }
       
