@@ -1,9 +1,9 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import {useEffect} from "react"
 import { options } from "../utils/constants"
 import { addNowPlayingMovies } from '../utils/moviesSlice' 
 const useGetNowPlayingMovies = () =>{
-
+    const nowplayingmoviesfromstore = useSelector(store => store.movies.NowPlayingMovies)
     const dispatch = useDispatch() 
     // make a call to get the data form   TMDB
     const getMoviesdata = async () =>{
@@ -19,7 +19,7 @@ const useGetNowPlayingMovies = () =>{
     }
 
     useEffect(()=>{
-        getMoviesdata();
+       !nowplayingmoviesfromstore && getMoviesdata();
     } , [])
 }
 
