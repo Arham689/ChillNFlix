@@ -1,4 +1,4 @@
-import React, {  useRef } from 'react'
+import React, {  useRef, useState } from 'react'
 import logo from '../assets/background-flix.jpeg'
 import {langFullForm} from '../utils/langConfig'
 import { useDispatch, useSelector } from 'react-redux'
@@ -7,19 +7,22 @@ import { API_KEY } from '../utils/constants'
 import { options } from '../utils/constants'
 import { addGptResArray, addSearchedMoviesList } from '../utils/gptSlice'
 import GptmovieList from './GptmovieList'
+import Shimmer from './Shimmer'
 const GptSearch = () => {
   const currentLnag  = useSelector(store => store.lang.lang)
- 
+  const [isSearching , setIsSearching] = useState(false)
   const dispatch = useDispatch() 
   const useInput = useRef(null)
 
 
 
   const hangleHit =async ()=>{
+    if( useInput.current.value === '' ) return null
+    setIsSearching(true)
     const qury = 'Act as a Movie Recommendation system and suggest some movies for the query : ' + useInput.current.value + '. only give me names of 5 movies, comma seperated like the example result given ahead. example : movie1 , movie2 , movie3 , movie4 , movie5 '
     // console.log("input" ,qury);
     // getAiRes(qury);
-
+    
     const gptResults  = await openai.chat.completions.create({
       messages: [{ role: 'user', content: qury }],
       model: 'gpt-3.5-turbo',
@@ -35,8 +38,8 @@ const GptSearch = () => {
 
     //promis.all
     const tmdbResults =await Promise.all(SearchedMoviesdata)
-
-    console.log(tmdbResults );
+    setIsSearching(false)
+    // console.log(tmdbResults );
 
     dispatch(addGptResArray(stringResult))
     dispatch(addSearchedMoviesList(tmdbResults))
@@ -51,7 +54,7 @@ const GptSearch = () => {
   }
   
   return (
-    <div className=' z-30 text-white pt-1     h-screen '>
+    <div className=' z-30 text-white pt-1  bg-black md:bg-[#ffffff00]   h-screen '>
         <img src={logo} alt="eeheh"  className=' blur-sm  hidden  md:block -z-20 fixed'/>
         <div className=' mt-24 flex justify-center'>
         <input ref={useInput} placeholder={langFullForm[currentLnag].inputPlaceholder} className=' p-3 text-[black] h-10 bg-[#ffffff] rounded-md md:w-96' type="text"   />
@@ -59,7 +62,7 @@ const GptSearch = () => {
         </div>
         <div className=' w-screen bg-[#ffffff95] mt-3  h-[1px] '></div>
 
-        <GptmovieList/>
+       {isSearching ?<Shimmer/> :<GptmovieList /> } 
         
     </div>
   ) 

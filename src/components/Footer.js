@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/applogo.jpeg'
 const Footer = () => {
   return (
-    <footer className="bg-whi text-white pt-12 pb-8 px-4">
+    <footer className="bg-white text-white pt-12 pb-8 px-4">
       <div className="mx-auto px-4 container overflow-hidden flex flex-col lg:flex-row justify-between">
         <a href="/" className="block mr-4 w-1/3">
           <img src={logo} className="w-40 ml-4 lg:ml-0" alt="logo" />

@@ -41,7 +41,7 @@ const Login = () => {
           dispatch(adduser({uid : uid , email : email , displayName : displayName}))
         }).catch((error) => {
         });
-        console.log(user);
+        // console.log(user);
       })
       .catch((error) => {
         // const errorCode = error.code;

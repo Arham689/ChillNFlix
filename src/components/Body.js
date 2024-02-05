@@ -1,23 +1,27 @@
 import React from 'react'
 import Browse from './Browse'
 import Login from './Login'
-import { createBrowserRouter  , BrowserRouter} from 'react-router-dom'
+import { createBrowserRouter  } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import SingleMovie from './SingleMovie'
+import ErrorElement from './ErrorElement'
 
 const Body = ()=>{
     const myrouter = createBrowserRouter([
         {
           path:'/',
-          element:<Login/>
+          element:<Login/>,
+          errorElement : <ErrorElement/>
         },
         {
           path : '/browse',
-          element : <Browse/> 
+          element : <Browse/> ,
+          errorElement : <ErrorElement/>
         },
         {
           path : '/info/:id',
-          element : <SingleMovie/>
+          element : <SingleMovie/>,
+          errorElement : <ErrorElement/>
         }
       ])
 
