@@ -26,8 +26,29 @@
     display: flex;
     gap: 20px;
   }
-  
-  
+  #square2{
+    width: 400px;
+    
+    height: 250px;
+    border-radius : 20px;
+    display: flex;
+    gap: 20px;
+  }
+  /* Custom animation keyframes */
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Apply animation to the element */
+  .slide {
+    animation: slideFromLeft 150ms ease;
+   }
+
   
   
   

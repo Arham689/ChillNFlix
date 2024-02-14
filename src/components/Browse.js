@@ -10,6 +10,7 @@ import Footer from './Footer'
 
 import { useSelector } from 'react-redux'
 import GptSearch from './GptSearch'
+import ScrollOnTop from './ScrollOnTop'
 
 const Browse = () => {
   const isGptvisible = useSelector(store => store.gpt.isGptOpened)
@@ -20,6 +21,7 @@ const Browse = () => {
    useGetUpComingMovies()
   return (
     <div>
+      <ScrollOnTop/>
       <Header/>
       {
         isGptvisible ?<GptSearch/>:<div>

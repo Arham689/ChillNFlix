@@ -4,6 +4,7 @@ import { auth } from "../utils/firebase";
 import { onAuthStateChanged } from 'firebase/auth'
 import { signOut } from "firebase/auth";
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from "react-router-dom";
 import { removeuser, adduser } from "../utils/userSlice";
 import { useNavigate } from "react-router-dom";
 import { toggleGptView } from '../utils/gptSlice'
@@ -66,6 +67,8 @@ const Header = () => {
             <button className="text-[#ffffffd3] border w-[90px] p-1 rounded-md mr-3 bg-[#000000] h-9"
               onClick={handelSignOUt}
             >Sign out</button>}
+       
+          <Link to={'/youtube'}>  <button className=" text-white mr-4 bg-[#cd1313ce] rounded-lg px-2 md:w-20 active:bg-black h-9">YouTube</button>  </Link>
           <button onClick={ToggleGpt} className=" text-white mr-4 bg-[#cd1313ce] rounded-lg px-2 md:w-20 active:bg-black h-9">{isGptVisible ? "Home" : "GPT"}</button>
           <img
             className="m-1"

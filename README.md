@@ -37,3 +37,17 @@
 - Main Movie
 - Tailer in Background
 - Title & descreption
+- 
+- ### building youtube 
+- youtube browse page 
+- powerfull search  stronger than flipcart 
+- nedsted comments 
+- live chat 
+- infinite scroll 
+- responsive side bar 
+- and what not 
+- scorll on top
+- catogory filtes
+- cahnnal info 
+- video playing page 
+- 

@@ -5,7 +5,7 @@ import { createBrowserRouter  } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import SingleMovie from './SingleMovie'
 import ErrorElement from './ErrorElement'
-
+import YouTube from './YouTube'
 const Body = ()=>{
     const myrouter = createBrowserRouter([
         {
@@ -21,6 +21,11 @@ const Body = ()=>{
         {
           path : '/info/:id',
           element : <SingleMovie/>,
+          errorElement : <ErrorElement/>
+        },
+        {
+          path : "/youtube",
+          element : <YouTube/>,
           errorElement : <ErrorElement/>
         }
       ])

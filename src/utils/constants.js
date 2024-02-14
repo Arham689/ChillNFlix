@@ -20,3 +20,8 @@ export const avalibleLang = [
   export const TMDB_IMG_URL = "https://image.tmdb.org/t/p/w500"
 
   export const OPENAI_KEY = process.env.REACT_APP_OPENAPI_KEY
+
+
+  const YTAPI_KEY = "AIzaSyBSR9qbi18tcmUtr_CjWwSFthTye5IAHTQ"
+
+  export const YT_API =  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&key=" + YTAPI_KEY 

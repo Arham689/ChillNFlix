@@ -3,13 +3,15 @@ import  userReducer   from './userSlice';
 import moviesReducer  from './moviesSlice';
 import gptReducer from './gptSlice';
 import appSettingReducer from './appSetting';
+import YtSideSilce from './YtSideSilce';
 const appstore = configureStore(
     {
         reducer: {
             user : userReducer,
             movies : moviesReducer ,
             gpt : gptReducer,
-            lang : appSettingReducer
+            lang : appSettingReducer,
+            sidebar : YtSideSilce
         }
     }
 )

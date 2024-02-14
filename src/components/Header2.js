@@ -1,7 +1,6 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import logo from '../assets/Netflix_Logo_PMS.png'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const Header2 = () => {
     
   return (
