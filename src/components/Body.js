@@ -6,6 +6,7 @@ import { RouterProvider } from 'react-router-dom'
 import SingleMovie from './SingleMovie'
 import ErrorElement from './ErrorElement'
 import YouTube from './YouTube'
+import YTSingleVideopage from './YTSingleVideopage'
 const Body = ()=>{
     const myrouter = createBrowserRouter([
         {
@@ -27,7 +28,12 @@ const Body = ()=>{
           path : "/youtube",
           element : <YouTube/>,
           errorElement : <ErrorElement/>
+        },
+        {
+          path : '/TYBrows/:id',
+          element : <YTSingleVideopage/>
         }
+
       ])
 
     return(

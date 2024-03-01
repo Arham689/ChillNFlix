@@ -8,6 +8,7 @@ import {YT_API} from '../utils/constants'
 import YtVideoCard from "./YtVideoCard"
 import Shimmer2 from "./Shimmer2"
 import ScrollOnTop from './ScrollOnTop'
+import { Link } from "react-router-dom"
 const YouTube = () =>{
     const isSideBarOpen = useSelector(store => store.sidebar.isSideBarOpen)
     const [videoList , setVideoList] = useState([])
@@ -17,7 +18,7 @@ const YouTube = () =>{
         const data = await fetch(YT_API)
         const json = await data.json() 
         setVideoList(json.items)
-        console.log(videoList);
+        // console.log(videoList);
     }
         getdata()
     } , [])
@@ -37,8 +38,8 @@ const YouTube = () =>{
                 {/* main container videos */}
 
                 { (videoList.length === 0 ) ? <Shimmer2/> : <div className=" flex gap-5 justify-center flex-wrap">
-                {videoList && videoList.map((i)=>{
-                   return <YtVideoCard items = {i}/> 
+                {videoList && videoList.map((i , index)=>{
+                   return <Link key={i.id}  to={'/TYBrows/' + i.id} state={{itemData : i }}><YtVideoCard  items = {i}/> </Link> 
                 }) }
                 </div>}
                 

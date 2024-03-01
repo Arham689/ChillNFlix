@@ -4,6 +4,7 @@ import moviesReducer  from './moviesSlice';
 import gptReducer from './gptSlice';
 import appSettingReducer from './appSetting';
 import YtSideSilce from './YtSideSilce';
+import YTSearch from './YTSearch';
 const appstore = configureStore(
     {
         reducer: {
@@ -11,7 +12,8 @@ const appstore = configureStore(
             movies : moviesReducer ,
             gpt : gptReducer,
             lang : appSettingReducer,
-            sidebar : YtSideSilce
+            sidebar : YtSideSilce,
+            cache : YTSearch,
         }
     }
 )
