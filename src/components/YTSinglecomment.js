@@ -8,11 +8,11 @@ const YTSinglecomment = ({data}) => {
     const smallDesc = sinppet.description.substr(0 , 150)
   return (
     <div>
-      <div className='w-[70vw]'>
-        <h1 className=' font-bold text-3xl'>
+      <div className='sm:w-[70vw]'>
+        <h1 className='ml-2 font-bold sm:text-3xl'>
           {sinppet.title }
         </h1>
-        <pre onClick={()=>{setIsDescVisible(true)}} className=' cursor-pointer mt-3 p-2 rounded-xl mx-3 whitespace-pre-wrap bg-[#414141]' >
+        <pre onClick={()=>{setIsDescVisible(true)}} className=' cursor-pointer text-sm sm:text-lg mt-3 p-2 rounded-xl mx-3 whitespace-pre-wrap bg-[#414141]' >
           {isDescVisible ? <div>
             {sinppet.description}  
             

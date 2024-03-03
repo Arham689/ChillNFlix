@@ -5,6 +5,7 @@ import gptReducer from './gptSlice';
 import appSettingReducer from './appSetting';
 import YtSideSilce from './YtSideSilce';
 import YTSearch from './YTSearch';
+import YTsearchedDataSlice from './YTsearchedDataSlice';
 const appstore = configureStore(
     {
         reducer: {
@@ -14,6 +15,7 @@ const appstore = configureStore(
             lang : appSettingReducer,
             sidebar : YtSideSilce,
             cache : YTSearch,
+            YTsearchList : YTsearchedDataSlice,
         }
     }
 )

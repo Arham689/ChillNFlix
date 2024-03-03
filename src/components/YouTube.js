@@ -37,7 +37,7 @@ const YouTube = () =>{
                 </div >
                 {/* main container videos */}
 
-                { (videoList.length === 0 ) ? <Shimmer2/> : <div className=" flex gap-5 justify-center flex-wrap">
+                { (videoList?.length === 0 ) ? <Shimmer2/> : <div className=" flex gap-5 justify-center flex-wrap">
                 {videoList && videoList.map((i , index)=>{
                    return <Link key={i.id}  to={'/TYBrows/' + i.id} state={{itemData : i }}><YtVideoCard  items = {i}/> </Link> 
                 }) }

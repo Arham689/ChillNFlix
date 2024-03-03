@@ -7,6 +7,7 @@ import SingleMovie from './SingleMovie'
 import ErrorElement from './ErrorElement'
 import YouTube from './YouTube'
 import YTSingleVideopage from './YTSingleVideopage'
+import YTSearchPage from './YTSearchPage'
 const Body = ()=>{
     const myrouter = createBrowserRouter([
         {
@@ -32,6 +33,10 @@ const Body = ()=>{
         {
           path : '/TYBrows/:id',
           element : <YTSingleVideopage/>
+        },
+        {
+          path : '/searchpage',
+          element : <YTSearchPage/>
         }
 
       ])
