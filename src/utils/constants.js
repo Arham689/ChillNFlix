@@ -16,7 +16,7 @@ export const avalibleLang = [
   {id : 'spanish' , name : "spanish"}
 
 ]
-  const YTAPI_KEY = "AIzaSyB1EXQAOlP2p-HOBJg1JU3pVPc9Fon_VSM" 
+  export const YTAPI_KEY = "AIzaSyCIPst7OWX_qRW94C9nmQp_hOEjH2DE2UA" 
   export const TMDB_IMG_URL = "https://image.tmdb.org/t/p/w500"
 
   export const OPENAI_KEY = process.env.REACT_APP_OPENAPI_KEY
@@ -27,3 +27,7 @@ export const avalibleLang = [
   export const YT_API =  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&key=" + YTAPI_KEY 
 
   export const YT_Searchapi = `https://www.googleapis.com/youtube/v3/search?key=${YTAPI_KEY}&part=snippet&type=video&maxResults=30&q=`
+
+  export const Clint_ID = '491899498247-1pfas8sfs513qf749kul2k01t1tbi7kv.apps.googleusercontent.com'
+
+  export const Client_secret = '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'

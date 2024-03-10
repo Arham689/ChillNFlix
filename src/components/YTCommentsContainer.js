@@ -135,13 +135,13 @@ const comments = [
 ]
 
 const Singlecomment = ({data})=>{
-    return <div className='flex p-3'>
+    return <div className='flex p-[2px] lg:p-3'>
         <div className='w-11 rounded-xl mr-3'>
             <img src={botAvatar} alt="" />
         </div>
         <div>
             <p>{data.name}</p>
-            <p>{data.text}</p>
+            <p className='text-[#7b7b7b]'>{data.text}</p>
         </div>
     </div>
 }
@@ -153,7 +153,7 @@ const CommentsList = ({comments}) => {
             <div key={index} >
             
             <Singlecomment data = {comment}/>
-            <div className='px-5 mx-3 border-l-2'>
+            <div className='lg:px-4 mx-2 lg:mx-3 border-l-2'>
                 <CommentsList comments = {comment.replies}/>
             </div>
             </div>
@@ -164,7 +164,7 @@ const CommentsList = ({comments}) => {
 const YTCommentsContainer = () => {
   return (
     <>
-     <div className=' text-2xl mb-4'>
+     <div className=' text-2xl mb-4 overflow-y-scroll'>
       comments
     </div>
     <CommentsList comments={comments}/>

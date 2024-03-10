@@ -15,6 +15,9 @@ const YTSingleSearchedResult = ({ searchedData }) => {
         <div className=' text-gray-600'>
           {snippet.description}
         </div>
+        {
+          snippet.liveBroadcastContent === 'live' &&<div className=' font-bold w-11 px-1 bg-[#cb1a1a] rounded-lg'>LIVE</div>
+        }
         <div>
           {snippet.channelTitle}
         </div>

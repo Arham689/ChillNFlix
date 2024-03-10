@@ -1,4 +1,4 @@
-import React, { useState , useRef } from 'react'
+import React, { useState , useRef , useEffect } from 'react'
 import {useDispatch} from 'react-redux'
 import baclground from '../assets/background-flix.jpeg'
 import { validateFrom } from '../utils/validation'
@@ -6,7 +6,24 @@ import {  createUserWithEmailAndPassword  , signInWithEmailAndPassword , updateP
 import {auth} from '../utils/firebase'
 import { adduser } from '../utils/userSlice';
 import Header from './Header';
+import YT_login from './YT_login';
+import YT_logout from './YT_logout';
+import {gapi} from 'gapi-script'
+import {Clint_ID} from '../utils/constants'
 const Login = () => {
+  // google OAuth 2.0 ki process 
+  useEffect(()=>{
+    function start () {
+      gapi.client.init({
+        Clinentid : Clint_ID,
+        scope : '',
+      })
+    }
+
+    gapi.load('client:auth2' , start)
+  }, [])
+
+  
   const [FormStatus , setFormStatus] = useState(false)
   const [message , setMessage] = useState(null)
   const dispatch = useDispatch()
@@ -95,11 +112,12 @@ const Login = () => {
                 <p className='font-bold mb-2 text-[#ff6600c8]'>{message}</p>
                 <button onClick={Hendelsigninbutton}  className=' bg-[red] w-full h-12 active:bg-black active:border-2 border-red rounded-md text-white text-bold'>{FormStatus ? "Sign Up" :"Sign In"}</button>
                 <p onClick={toggleStatus} className=' text-[#8c8c8c] pt-9'>{FormStatus ? "Already have a Account ?" :"New to Chil N Flix?"} <span className=' text-white hover:underline cursor-pointer'> {FormStatus ? "Sign In Now" :"Sign Up"}</span></p>
-
+                
               </form>
 
             </div>
           </div>
+          
         </div>
     </div>
   )

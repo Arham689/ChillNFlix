@@ -11,7 +11,7 @@ const YTSearchPage = () => {
     const dispatch = useDispatch()
     const location = useLocation() 
     const listData = useSelector( store => store.YTsearchList.list)
-    // console.log(location);
+    console.log(listData);
     const term =  location.state.term
     const getdata = async ()=>{
         try {
