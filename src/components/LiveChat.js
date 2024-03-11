@@ -7,7 +7,7 @@ const LiveChat = ({liveCahtId}) => {
   const handelShowChat = ()=>{setIsChatVisible(!isChatVisible)}
   // console.log(liveCahtId)
   const chatContainerRef = useRef(null)
-  console.log(chatContainerRef.current)
+  // console.log(chatContainerRef.current)
   const [chat  , setChat ] = useState([])    
   const getLiveChat  = async (liveCahtId) =>{
     try {
@@ -27,12 +27,10 @@ const LiveChat = ({liveCahtId}) => {
   }
 
   useEffect(() => {
-    console.log("useEffect triggered");
     scrollToBottom();
 }, [chat]);
 
 const scrollToBottom = () => {
-  console.log('bottom called ')
   // this if () will return 'true' when we are close to the bottom 
   // if(chatContainerRef.current)
 if(Math.abs(chatContainerRef?.current?.scrollHeight - chatContainerRef?.current?.clientHeight - chatContainerRef?.current?.scrollTop) <= 200)

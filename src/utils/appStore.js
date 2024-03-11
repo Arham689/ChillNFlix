@@ -6,6 +6,7 @@ import appSettingReducer from './appSetting';
 import YtSideSilce from './YtSideSilce';
 import YTSearch from './YTSearch';
 import YTsearchedDataSlice from './YTsearchedDataSlice';
+import offlineCahtSlice from './offlineCahtSlice';
 const appstore = configureStore(
     {
         reducer: {
@@ -16,6 +17,7 @@ const appstore = configureStore(
             sidebar : YtSideSilce,
             cache : YTSearch,
             YTsearchList : YTsearchedDataSlice,
+            offlinchat : offlineCahtSlice,
         }
     }
 )

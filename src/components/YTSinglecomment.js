@@ -8,7 +8,6 @@ const YTSinglecomment = ({data}) => {
     const sinppet = data.snippet
     const stat  = data.statistics
     const smallDesc = sinppet.description.substr(0 , 150)
-    
   return (
     <div>
       <div className='lg:w-[70vw]'>

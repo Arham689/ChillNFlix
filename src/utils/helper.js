@@ -1,0 +1,87 @@
+var nameList = [
+    'Time', 'Past', 'Future', 'Dev',
+    'Fly', 'Flying', 'Soar', 'Soaring', 'Power', 'Falling',
+    'Fall', 'Jump', 'Cliff', 'Mountain', 'Rend', 'Red', 'Blue',
+    'Green', 'Yellow', 'Gold', 'Demon', 'Demonic', 'Panda', 'Cat',
+    'Kitty', 'Kitten', 'Zero', 'Memory', 'Trooper', 'XX', 'Bandit',
+    'Fear', 'Light', 'Glow', 'Tread', 'Deep', 'Deeper', 'Deepest',
+    'Mine', 'Your', 'Worst', 'Enemy', 'Hostile', 'Force', 'Video',
+    'Game', 'Donkey', 'Mule', 'Colt', 'Cult', 'Cultist', 'Magnum',
+    'Gun', 'Assault', 'Recon', 'Trap', 'Trapper', 'Redeem', 'Code',
+    'Script', 'Writer', 'Near', 'Close', 'Open', 'Cube', 'Circle',
+    'Geo', 'Genome', 'Germ', 'Spaz', 'Shot', 'Echo', 'Beta', 'Alpha',
+    'Gamma', 'Omega', 'Seal', 'Squid', 'Money', 'Cash', 'Lord', 'King',
+    'Duke', 'Rest', 'Fire', 'Flame', 'Morrow', 'Break', 'Breaker', 'Numb',
+    'Ice', 'Cold', 'Rotten', 'Sick', 'Sickly', 'Janitor', 'Camel', 'Rooster',
+    'Sand', 'Desert', 'Dessert', 'Hurdle', 'Racer', 'Eraser', 'Erase', 'Big',
+    'Small', 'Short', 'Tall', 'Sith', 'Bounty', 'Hunter', 'Cracked', 'Broken',
+    'Sad', 'Happy', 'Joy', 'Joyful', 'Crimson', 'Destiny', 'Deceit', 'Lies',
+    'Lie', 'Honest', 'Destined', 'Bloxxer', 'Hawk', 'Eagle', 'Hawker', 'Walker',
+    'Zombie', 'Sarge', 'Capt', 'Captain', 'Punch', 'One', 'Two', 'Uno', 'Slice',
+    'Slash', 'Melt', 'Melted', 'Melting', 'Fell', 'Wolf', 'Hound',
+    'Legacy', 'Sharp', 'Dead', 'Mew', 'Chuckle', 'Bubba', 'Bubble', 'Sandwich', 'Smasher', 'Extreme', 'Multi', 'Universe', 'Ultimate', 'Death', 'Ready', 'Monkey', 'Elevator', 'Wrench', 'Grease', 'Head', 'Theme', 'Grand', 'Cool', 'Kid', 'Boy', 'Girl', 'Vortex', 'Paradox'
+  ];
+  export function generate() {
+  return nameList[Math.floor(Math.random() * nameList.length)];
+        
+    };
+
+
+    const footballFacts = [
+        "The earliest form of football can be traced back to Ancient China, where it was called Cuju and dates back to the 2nd and 3rd centuries BCE.",
+        "The modern version of football, as we know it today, originated in England in the 19th century.",
+        "The first ever international football match was played between Scotland and England in 1872, ending in a 0-0 draw.",
+        "The FIFA World Cup is the most prestigious football tournament in the world, with the first tournament being held in 1930.",
+        "The fastest recorded goal in football history was scored by Ricardo Olivera just 2.8 seconds into a match.",
+        "The highest-scoring football match in history ended with a score of 149-0, with AS Adema defeating SO l'Emyrne in a Madagascar league match.",
+        "Brazil is the only nation to have appeared in every FIFA World Cup tournament since its inception.",
+        "Lionel Messi holds the record for the most Ballon d'Or awards, with six to his name.",
+        "Pele is the only player to have won three FIFA World Cups (1958, 1962, 1970).",
+        "Cristiano Ronaldo is the all-time top scorer in the UEFA Champions League.",
+        "The fastest recorded speed of a football ever kicked is 131 mph (211 km/h), achieved by Ronny Heberson.",
+        "The heaviest ever professional footballer was Jon Parkin, who weighed around 120kg during his playing career.",
+        "The most goals scored by a single player in a calendar year is 91, achieved by Lionel Messi in 2012.",
+        "The oldest football club in the world is Sheffield FC, founded in 1857.",
+        "The largest football stadium in the world is the Rungrado 1st of May Stadium in North Korea, with a seating capacity of 114,000.",
+        "The most expensive football transfer in history is Neymar's move from Barcelona to Paris Saint-Germain for €222 million.",
+        "The fastest sprint speed recorded during a football match is 36 km/h, achieved by Arjen Robben.",
+        "The most capped football player of all time is Ahmed Hassan of Egypt, with over 184 international appearances.",
+        "The fastest red card in football history was given just 2 seconds into a match, to Lee Todd.",
+        "The most goals scored by a player in a single FIFA World Cup tournament is 13, achieved by Just Fontaine of France in 1958.",
+        "The largest winning margin in an international football match is 31-0, with Australia defeating American Samoa in 2001.",
+        "The most goals scored by a team in a single FIFA World Cup match is 10, achieved by Hungary in 1982 against El Salvador.",
+        "The oldest player to ever play in a FIFA World Cup match is Essam El-Hadary of Egypt, who was 45 years and 161 days old.",
+        "The fastest hat-trick in professional football was scored in just 70 seconds by Tommy Ross in 1964.",
+        "The most expensive football stadium ever built is the MetLife Stadium in New Jersey, USA, costing over $1.6 billion.",
+        "The FIFA Women's World Cup was first held in 1991, with the United States winning the inaugural tournament.",
+        "The record for the most consecutive league wins in English football is held by Manchester City, with 18 wins in the 2017-2018 season.",
+        "The FIFA Confederations Cup is held every four years and features champions from each continent.",
+        "The fastest goal scored in a FIFA World Cup match was scored by Hakan Şükür of Turkey just 11 seconds into a match.",
+        "The largest transfer fee paid for a goalkeeper is €80 million, with Chelsea signing Kepa Arrizabalaga from Athletic Bilbao in 2018.",
+        "The first football match broadcasted on television was in 1937, between Arsenal and Arsenal Reserves.",
+        "The most expensive football match in history was the 2017 UEFA Champions League final between Juventus and Real Madrid, with over $600 million spent on players.",
+        "The largest attendance at a football match was in 1950, with an estimated 199,854 people attending the Maracanã Stadium in Brazil.",
+        "The oldest football competition in the world is the FA Cup, first held in 1871.",
+        "The fastest sending off for a substitute in football history occurred in just 2 seconds, to Jason Crowe.",
+        "The most expensive football club in the world is Manchester United, valued at over $3 billion.",
+        "The fastest goal scored in Premier League history was scored by Shane Long in just 7.69 seconds.",
+        "The most expensive football match ticket ever sold was for the 2014 FIFA World Cup final, which sold for over $100,000.",
+        "The most goals scored by a team in a single English Premier League season is 106, achieved by Manchester City in the 2017-2018 season.",
+        "The first ever football club to be sponsored was Kettering Town FC, who were sponsored by Kettering Tyres in 1976.",
+        "The highest transfer fee paid for a teenager is €180 million, with Paris Saint-Germain signing Kylian Mbappé from AS Monaco.",
+        "The most goals scored by a player in a single English Premier League season is 32, achieved by Mohamed Salah.",
+        "The first football World Cup held outside of Europe and the Americas was in South Korea and Japan in 2002.",
+        "The most expensive football boots ever made are a pair of Nike Mercurial Vapor IX CR7 Diamond Boots, valued at $4,000,000.",
+        "The highest scoring draw in English football history is 6-6, achieved by Charlton Athletic and Middlesbrough in 1960.",
+        "The fastest goal scored in a UEFA Champions League final was scored by Paolo Maldini in 50 seconds.",
+        "The most expensive football club stadium naming rights deal is the Emirates Stadium, home to Arsenal FC, which cost over $200 million.",
+        "The most goals scored by a player in a single FIFA World Cup match is 5, achieved by Oleg Salenko of Russia against Cameroon in 1994.",
+        "The fastest goal scored in an FA Cup final was scored by Roberto Di Matteo in just 42 seconds.",
+        "The most expensive football club takeover was the acquisition of Manchester City by Sheikh Mansour bin Zayed Al Nahyan, costing over £210 million.",
+        "The most expensive footballer of all time, when accounting for inflation, is Arthur Wharton, who transferred to Preston North End for £10 in 1885.",
+      ];
+
+      export function generatetext() {
+        return footballFacts[Math.floor(Math.random() * footballFacts.length)];
+              
+          };

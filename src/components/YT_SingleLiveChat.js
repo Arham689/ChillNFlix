@@ -3,7 +3,7 @@ import React from 'react'
 
 const YT_SingleLiveChat = ({chat}) => {
    const {snippet , authorDetails} = chat 
-   console.log(chat);
+  //  console.log(chat);
   return (
     <div className='flex border mx-1 my-2 rounded-xl gap-2 border-[#6b6b6b]'>
         <div className=' items-center text-[#767575]'>

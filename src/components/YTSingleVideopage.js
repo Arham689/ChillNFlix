@@ -5,6 +5,7 @@ import YTSinglecomment from './YTSinglecomment'
 import ScrollOnTop  from './ScrollOnTop'
 import LiveChat from './LiveChat'
 import {YTAPI_KEY} from '../utils/constants'
+import YT_LiveCahtoffline from './YT_LiveCahtoffline'
 const YTSingleVideopage = () => {
   const location = useLocation() ;
   const data = location.state.itemData
@@ -34,7 +35,7 @@ const YTSingleVideopage = () => {
         src={"https://www.youtube.com/embed/"+ id + "?&autoplay=1&mute=1&rel=0&modestbranding=1&loop=1"}
         allowFullScreen 
         ></iframe>  
-        <LiveChat liveCahtId = {liveCahtId} className=' flex-1'/>
+        {liveCahtId ?<LiveChat liveCahtId = {liveCahtId} className=' flex-1'/>:<YT_LiveCahtoffline/>} 
         
       </div>
       
