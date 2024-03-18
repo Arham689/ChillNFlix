@@ -3,10 +3,10 @@ import { GoogleLogin } from 'react-google-login'
 import { Clint_ID } from '../utils/constants'
 const YT_login = () => {
   const onSuccess = (res)=>{
-    console.log('login ho gay!' , res.profileObj)
+    console.log( res.profileObj)
   }
   const onFailure = (res) =>{
-    console.log('login nahi hua ' , res)
+    console.log( res)
   }
   return (
     <div>

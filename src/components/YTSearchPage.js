@@ -11,14 +11,14 @@ const YTSearchPage = () => {
     const dispatch = useDispatch()
     const location = useLocation() 
     const listData = useSelector( store => store.YTsearchList.list)
-    console.log(listData);
+    // console.log(listData);
     const term =  location.state.term
     const getdata = async ()=>{
         try {
             const data = await fetch(YT_Searchapi + term)
             const json = await data.json()
             dispatch(addList(json?.items))
-            console.log(json?.items)
+            // console.log(json?.items)
         } catch (error) {
             console.log(error);
         }

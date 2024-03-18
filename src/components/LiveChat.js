@@ -23,7 +23,7 @@ const LiveChat = ({liveCahtId}) => {
   }
   if(liveCahtId && isChatVisible )
   {
-    // getLiveChat(liveCahtId) 
+    getLiveChat(liveCahtId) 
   }
 
   useEffect(() => {

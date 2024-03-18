@@ -2,10 +2,10 @@ import React from 'react'
 
 
 const YtVideoCard = ({items}) => {
-    console.log(items);
-    if (!items || !items.statistics) {
-        return <div className='text-white'>daa is loading </div>;
-      }
+    // console.log(items);
+    // if (!items || !items.statistics) {
+    //     return <div className='text-white'>daa is loading </div>;
+    //   }
 
       const {snippet  , statistics  } = items
 
@@ -65,7 +65,7 @@ const formattedDate = parsedDate.toLocaleDateString('en-US', options);
 
 
 const uplodetime = todate(snippet?.publishedAt)
-const views = numberToString(statistics.viewCount)
+// const views = numberToString(statistics.viewCount)
   return (
     <div className='hover:scale-105 transition-all ease-out duration-200 cursor-pointer text-white'>
         <div className='max-w-[380px]'>
@@ -76,9 +76,9 @@ const views = numberToString(statistics.viewCount)
         <h3 className='font-bold text-sm text-[#7e7d7d] '> 
             {snippet.channelTitle}
         </h3> 
-        <span>
+        {/* { statistics && <span>
         {views} views &nbsp; 
-        </span>
+        </span>} */}
        
         <span>
              {uplodetime}

@@ -6,8 +6,6 @@ import {  createUserWithEmailAndPassword  , signInWithEmailAndPassword , updateP
 import {auth} from '../utils/firebase'
 import { adduser } from '../utils/userSlice';
 import Header from './Header';
-import YT_login from './YT_login';
-import YT_logout from './YT_logout';
 import {gapi} from 'gapi-script'
 import {Clint_ID} from '../utils/constants'
 const Login = () => {
@@ -26,6 +24,7 @@ const Login = () => {
   
   const [FormStatus , setFormStatus] = useState(false)
   const [message , setMessage] = useState(null)
+  const [isCredentialVisible , setIsCredentialVisible] = useState(false)
   const dispatch = useDispatch()
   const toggleStatus = () =>{
     setFormStatus(!FormStatus)
@@ -81,7 +80,11 @@ const Login = () => {
     }
     
     
+    
   }
+  const toggleCredential = ()=>{
+      setIsCredentialVisible(!isCredentialVisible)
+    }
   return (
     <div className=''>
         <Header/>
@@ -114,7 +117,14 @@ const Login = () => {
                 <p onClick={toggleStatus} className=' text-[#8c8c8c] pt-9'>{FormStatus ? "Already have a Account ?" :"New to Chil N Flix?"} <span className=' text-white hover:underline cursor-pointer'> {FormStatus ? "Sign In Now" :"Sign Up"}</span></p>
                 
               </form>
-
+                  <div className=' text-white '>
+                  {isCredentialVisible ? <div  className='m-1 ' >
+                    <h1>Id :user005@gmail.com</h1>
+                    <h1>Password :RGS"4_b#</h1>
+                  </div> : <button onClick={toggleCredential} className=' bg-[#494949] rounded-lg p-2 m-1 ' >show Credential</button>
+                  }
+                  </div>
+                  
             </div>
           </div>
           

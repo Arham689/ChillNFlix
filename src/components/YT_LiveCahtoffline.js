@@ -20,10 +20,7 @@ const YT_LiveCahtoffline = () => {
         const i = setInterval(() => {
           if(isChatVisible)
             dispatch(addCaht({name : generate() , img :'https://xsgames.co/randomusers/assets/avatars/pixel/'+ randomenum() +'.jpg' , text :generatetext()}))
-          else
-          {
-          console.log('false')
-          }
+          
         }, 1000);
 
         return ()=>{
